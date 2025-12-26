@@ -10,11 +10,15 @@ export const routes: Routes = [
 		path: '',
 		loadComponent: () => import('./layout/layout.component').then(m => m.LayoutComponent),
 		children: [
-			{
-				path: 'dashboard',
-				loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent)
-			},
-			{ path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+			   {
+				   path: 'dashboard',
+				   loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent)
+			   },
+			   {
+				   path: 'facturacion',
+				   loadComponent: () => import('./facturacion/facturacion.component').then(m => m.FacturacionComponent)
+			   },
+			   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 		]
 	}
 ];

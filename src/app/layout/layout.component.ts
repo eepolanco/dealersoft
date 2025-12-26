@@ -14,6 +14,7 @@ import { MenuItem } from 'primeng/api';
 export class LayoutComponent {
   menuItems: MenuItem[] = [
     { label: 'Dashboard', icon: 'pi pi-home', routerLink: '/dashboard' },
+    { label: 'Facturación', icon: 'pi pi-file', routerLink: '/facturacion' },
     // Puedes agregar más opciones aquí
   ];
 
