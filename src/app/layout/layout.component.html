@@ -1,0 +1,26 @@
+<div class="layout-root">
+	<header class="layout-header navbar navbar-expand-lg px-3">
+		<div class="d-flex align-items-center w-100">
+			<!-- Botón toggle sidebar solo en mobile -->
+			<button class="btn btn-outline-primary d-lg-none me-3 toggle-sidebar-btn" type="button" (click)="sidebarOpen = !sidebarOpen">
+				<span class="pi pi-bars text-white"></span>
+			</button>
+			<div class="header__logo d-flex align-items-center ms-lg-0 ms-auto order-lg-0 order-2">
+				<img src="/assets/dealersoft-logo.png" alt="DealerSoft Logo" class="header__logoImg img-fluid h-auto" />
+			</div>
+			<div class="flex-grow-1"></div>
+			<div class="header-user d-flex align-items-center">
+				<span class="d-none d-md-inline">Emmanuel - Fulanito Auto Import</span>
+				<button class="logout-btn ms-3" title="Cerrar sesión">
+					<span class="pi pi-sign-out text-white"></span>
+				</button>
+			</div>
+		</div>
+	</header>
+	<aside class="layout-sidebar" [class.sidebar-collapsed]="!sidebarOpen && isMobile">
+		<p-menu [model]="menuItems" styleClass="sidebar-menu"></p-menu>
+	</aside>
+	<main class="layout-content">
+		<router-outlet></router-outlet>
+	</main>
+</div>
